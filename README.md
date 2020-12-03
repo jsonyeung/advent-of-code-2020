@@ -14,6 +14,6 @@ node day_DAY/part_PART.js
 Where `DAY` and `PART` is the corresponding day & part.
 
 ## Roadmap
-- [Day 1 ✅]()
-- [Day 2 ✅]()
-- [Day 3 ✅]()
+- [Day 1 ✅](day_1)
+- [Day 2 ✅](day_2)
+- [Day 3 ✅](day_3)
