@@ -30,12 +30,13 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
 */
 
 const map = input
+const num_rows = map.length
 const num_cols = map[0].length
 
 let trees = 0
 let tobaggan_pos = 0
 
-for (let m = 1; m < map.length; m += 1) {
+for (let m = 1; m < num_rows; m += 1) {
   tobaggan_pos = (tobaggan_pos + 3) % num_cols
 
   if (map[m].charAt(tobaggan_pos) === '#')

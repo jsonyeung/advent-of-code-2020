@@ -16,3 +16,4 @@ Where `DAY` and `PART` is the corresponding day & part.
 ## Roadmap
 - [Day 1 ✅]()
 - [Day 2 ✅]()
+- [Day 3 ✅]()

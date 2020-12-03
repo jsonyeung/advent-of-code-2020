@@ -1,6 +1,6 @@
 /*
 https://adventofcode.com/2020/day/3
-node day_3/part_1.js
+node day_3/part_2.js
 */
 const PATH = './input.txt'
 
@@ -23,6 +23,7 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
 
 function getTreeHits(rights, downs) {
   const map = input
+  const num_rows = map.length
   const num_cols = map[0].length
 
   let trees = 0
