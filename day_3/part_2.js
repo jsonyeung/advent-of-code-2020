@@ -21,15 +21,15 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
  while moving down the map M row(s) at a time, checking whether we hit a tree
 */
 
-function getTreeHits(rights, downs) {
-  const map = input
-  const num_rows = map.length
-  const num_cols = map[0].length
+const map = input
+const num_rows = map.length
+const num_cols = map[0].length
 
+function getTreeHits(rights, downs) {
   let trees = 0
   let tobaggan_pos = 0
 
-  for (let m = downs; m < map.length; m += downs) {
+  for (let m = downs; m < num_rows; m += downs) {
     tobaggan_pos = (tobaggan_pos + rights) % num_cols
 
     if (map[m].charAt(tobaggan_pos) === '#')
