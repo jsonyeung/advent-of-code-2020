@@ -19,7 +19,7 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
   parse input such that we get an array of passports.
   - each passport should be an array with its attributes
 
-  for each passport
+  for each passport in array
     check if passport has all required attributes
       - that is, check if every required attrs are in the array
         if no, remove the invalid passport from list
