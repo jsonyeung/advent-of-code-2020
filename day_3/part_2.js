@@ -11,10 +11,10 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
               .split('\r\n')
 
 /*
- THOUGHT PROCCESS
- ----------------
  Given my reasoning in part 1, we can abstract this
  to apply for any given slopes:
+
+ PSEUDOCODE:
  
  Assuming we have a slope (N RIGHTS, M DOWNS), 
  we should keep track of the tobaggan's position every N step(s)

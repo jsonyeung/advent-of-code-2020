@@ -11,11 +11,11 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
               .split('\r\n')
 
 /*
- THOUGHT PROCCESS
- ----------------
  the tobaggan goes towards a slope of (3 RIGHTS, 1 DOWN)
  so as a result, we should keep track of the tobaggan's position every 3 steps
  while moving down the map 1 row at a time, checking whether we hit a tree:
+
+ PSEUDOCODE:
 
  start with tobaggan's pos at 0
 

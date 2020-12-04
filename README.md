@@ -2,10 +2,11 @@
 A repo to store my code submissions for [AoC 2020](https://adventofcode.com/2020). Using JavaScript (NodeJS) for each excercise.
 
 Goals for this event
+- Show your work
 - Try to figure the answer without Googling it
 - Find & implement a _working_ solution step-by-step if can't figure it out
 - Completion first, efficiency second
-- Show your work
+
 
 ## Getting Started
 To run the code, use the command:
