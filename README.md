@@ -5,6 +5,7 @@ Goals for this event
 - Try to figure the answer without Googling it
 - Find & implement a _working_ solution step-by-step if can't figure it out
 - Completion first, efficiency second
+- Show your work
 
 ## Getting Started
 To run the code, use the command:
@@ -17,3 +18,4 @@ Where `DAY` and `PART` is the corresponding day & part.
 - [Day 1 ✅](day_1)
 - [Day 2 ✅](day_2)
 - [Day 3 ✅](day_3)
+- [Day 4 ✅](day_4)
