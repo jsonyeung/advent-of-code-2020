@@ -32,10 +32,10 @@ const bags = input.reduce((acc, bag) => {
   const [type, contents] = bag.replace(/bags|bag|\./gi, '').split(' contain ')
   acc[type.trim()] = contents.split(' , ').map((s) => {
     s = s.trim()
-    if (s === 'no other') return [s, 1]
+    if (s === 'no other') return [s, 0]
     else return [
       s.split(' ').slice(1).join(' '), 
-      Number(s.split(' ')[0] || 0)
+      Number(s.split(' ')[0])
     ]
   })
   return acc
