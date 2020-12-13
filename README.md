@@ -27,3 +27,4 @@ Where `DAY` and `PART` is the corresponding day & part.
 - [Day 9 ✅](day_9)
 - [Day 10 ✅](day_10)
 - [Day 11 ✅](day_11)
+- [Day 12 ✅](day_12)
