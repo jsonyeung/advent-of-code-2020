@@ -2,10 +2,10 @@
 A repo to store my code submissions for [AoC 2020](https://adventofcode.com/2020). Using JavaScript (NodeJS) for each excercise.
 
 Goals for this event
-- Show your work
+- Improve problem-solving skills — learn how to tackle difficult challenges
 - Try to figure the answer without Googling it
 - Find & implement a _working_ solution step-by-step if can't figure it out
-- Completion first, efficiency second
+- Redability first, efficiency second
 
 
 ## Getting Started
