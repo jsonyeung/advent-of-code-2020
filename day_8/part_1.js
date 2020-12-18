@@ -12,26 +12,8 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
 
 /*
   For this problem, if we think of each operation as a node, pointing to another
-  operation/node (aka, a directed graph), we can detect a loop when the graph has a cycle (aka, a loop)
-
-  PSEUDOCODE:
-
-  pointer = 0
-  increment = 0
-  visited = empty set
-
-  while pointer < length of operations,
-    - apply the operation
-      - if op == 'acc', add its value to accumulator
-      - if op == 'jmp', set increment to its value for next loop
-
-    - if pointer is one that we previously visited (aka, a loop)
-      break the loop
-    
-    add pointer to visited set
-    move pointer by adding increment
-  
-  return the accumulator
+  operation/node within a directed graph (https://algs4.cs.princeton.edu/42digraph/),
+  we can detect a loop when the graph has a directed cycle (aka, a loop).
 */
 
 const ops = input.map((op) => {

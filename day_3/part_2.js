@@ -11,14 +11,8 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
               .split('\r\n')
 
 /*
- Given my reasoning in part 1, we can abstract this
- to apply for any given slopes:
-
- PSEUDOCODE:
- 
- Assuming we have a slope (N RIGHTS, M DOWNS), 
- we should keep track of the tobaggan's position every N step(s)
- while moving down the map M row(s) at a time, checking whether we hit a tree
+ Given my reasoning in part 1, we can just abstract
+ this to apply for any given slopes (see code).
 */
 
 const map = input

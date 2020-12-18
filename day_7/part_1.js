@@ -13,21 +13,7 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
 /*
   The goal here is figure out how many bags contain at least 1 gold bag.
   To do this, we can check each bag to see if it contains a gold bag.
-  Note, some bags contain bags that contain gold bag(s) inside, so this will require some recursive calls to check:
-
-  PSEUDOCODE:
-
-  function hasGoldBag(bag)
-    for each sub-bag in bag
-      if sub-bag is a gold bag, return true
-      if sub-bag is an empty bag, return false
-      else check inside sub-bag (aka. hasGoldBag(sub_bag)) and repeat recursively
-  
-  for each bag:
-    if the bag -> hasGoldBag(bag),
-      increment count
-  
-  return the count
+  Note, some bags contain bags that contain gold bag(s) inside, so this will require some recursive calls to check.
 */
 
 const bags = input.reduce((acc, bag) => {

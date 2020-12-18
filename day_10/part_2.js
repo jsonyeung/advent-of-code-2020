@@ -15,7 +15,7 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
   This one I got stuck on 😖. Although I was able to figure out
   the general algorithm on my own, I had trouble trying to implement it.
 
-  I found this explanation to be super helpful:
+  I found this explanation by Hey Programmers to be super helpful:
   https://www.youtube.com/watch?v=_f8N7qo_5hA
   
   Basically, we can check each number in the sorted list (ascending) if

@@ -13,20 +13,8 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
 /*
  the tobaggan goes towards a slope of (3 RIGHTS, 1 DOWN)
  so as a result, we should keep track of the tobaggan's position every 3 steps
- while moving down the map 1 row at a time, checking whether we hit a tree:
-
- PSEUDOCODE:
-
- start with tobaggan's pos at 0
-
- for rows from m = 1 to bottom row
-  ⚠ we modulo the position because the map wraps around at the end
-  tobaggan's pos = (tobbagan's pos + 3) % (# of columns)
-
-  is (rows[m].charAt(tobbagan's pos) == '#')? (aka, is 🎄?)
-    if it is, increment tree count
-
- return tree count
+ while moving down the map 1 row at a time, checking whether we hit a tree. 
+ If we hit the end of the map, we simply wrap around to the beginning by moduloing the # of columns.
 */
 
 const map = input

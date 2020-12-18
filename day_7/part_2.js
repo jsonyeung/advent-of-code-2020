@@ -11,20 +11,9 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
               .split('\r\n')
 
 /*
-  in part 2, we have to figure out the number of bags a gold bag contains.
-  Here, we have to keep track of the sub-bags count, making sure to add the
+  For part 2, we have to figure out the # of bags a gold bag contains.
+  In particular, we have to keep track of the sub-bags count, making sure to add the
   # of sub-bags PLUS the # of bags within that sub-bag.
-
-  PSEUDOCODE:
-
-  function bagCount(bag)
-    for each sub-bag in bag:
-      if the sub-bag is empty bag, return 0
-      else return (# of sub-bags) + (# of sub-bags) * bagCount(sub-bag)
-
-    return the count
-
-  bagCount(the gold bag)
 */
 
 const bags = input.reduce((acc, bag) => {

@@ -11,20 +11,9 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
               .split('\r\n\r\n')
 
 /*
-  For each group, we need to find the number of 
-  unique characters; here, we can just use a set.
-
-  PSEUDOCODE:
-
-  count = 0
-  for each group
-    initiate set, S
-    for each question, 
-      put in set S
-
-    count += set's size
-  
-  return count
+  We need to find the number of 
+  unique characters for each group; 
+  here, we can just use a set.
 */
 
 const groups = input.map((str) => {

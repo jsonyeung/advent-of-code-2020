@@ -11,20 +11,9 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
               .split('\r\n\r\n')
 
 /*
-  here, we just need to check whether a passport contains 
-  all the necessary attributes or not. If it has, then we know it's valid:
-
-  PSEUDOCODE:
-
-  parse input such that we get an array of passports.
-  - each passport should be an array with its attributes
-
-  for each passport in array
-    check if passport has all required attributes
-      - that is, check if every required attrs are in the array
-        if no, remove the invalid passport from list
-
-  return number of valid passports      
+  We just need to check whether each passport contains 
+  all the necessary attributes or not. If it has, then we know it's valid.
+  Else, just filter it out.
 */
 
 let passports = input.map((line) => {
@@ -32,7 +21,7 @@ let passports = input.map((line) => {
   return line.match(/[\\r\\n]?([a-z]{3})(?=:)/g)
 })
 
-// PASS: filter by # of attributes
+// PART: filter by # of attributes
 const REQUIRED = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid']
 passports = passports.filter((keys) => {
   return REQUIRED.every((p) => keys.includes(p))

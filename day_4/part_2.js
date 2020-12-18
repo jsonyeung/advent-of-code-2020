@@ -12,21 +12,9 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
 
 /*
   compared to part 1, now we have to take account the validity of
-  the actual values. So, there are two things we have to check:
-  if a passport contains all the necessary attributes (part 1)
-  AND all attributes have valid values, then we know it's valid.
-
-  PSEUDOCODE:
-
-  parse input such that we get an array of passports.
-    - where each passport should be an OBJECT with attributes and values
-
-  for each passport in array
-    check if passport has all required attributes (part 1)
-    check if each passport has valid values
-      if no, remove the invalid passport from list
-  
-  return number of valid passports  
+  the actual values. So now, besides checking if the passport contains
+  all the necessary attributes (part 1), we also have to check that
+  all attributes have valid values (part 2). If that is the case, then we know it's valid. 
 */
 
 function parsePassport(line) {
@@ -70,14 +58,14 @@ function passportValid(passport) {
 
 let passports = input.map(parsePassport)
 
-// PASS 1: filter by # of attributes
+// PART 1: filter by # of attributes
 const REQUIRED = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid']
 passports = passports.filter((passport) => {
   const keys = Object.keys(passport)
   return REQUIRED.every((p) => keys.includes(p))
 })
 
-// PASS 2: filter by valid values
+// PART 2: filter by valid values
 passports = passports.filter(passportValid)
 
 console.log(passports.length)

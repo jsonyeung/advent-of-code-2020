@@ -11,14 +11,13 @@ let input = fs.readFileSync(path.resolve(__dirname, PATH))
               .split('\r\n')
 
 /*
-  In part two, we need to find a seatID. This seatID, in particular,
-  is an ID that actually doesn't exist within the input. However, there exists two other seatIDs 
-  that have a +1 and -1 difference from ours that ARE in the input.
+  In part two, we are finding a seatID that actually doesn't exist within the input.
+  HOWEVER, there exists two other seatIDs that have a +1 and -1 difference from ours that ARE in the input.
   (e.g. if "319 && 321" exists, the non-existent 320 is our seatID)
   Given this information, we have to find the missing "gap" which is our seatID
 
-  To make things simple, we can just sort the seatIDs and loop through, checking for
-  the missing gap 
+  To make things simple, just sort the seatIDs and loop through, checking for
+  the missing gap (see code).
 */
 
 function getSeatRow(partition) {
